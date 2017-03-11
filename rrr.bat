@@ -5,8 +5,17 @@ mode con: cols=1600 lines=900
 echo. [%date%]   %0    %1  (%*) 
 color 7a
 
+REM custom log
+git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)%ar%C(reset) %C(white)%s%C(reset) %C(dim white)%an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
+REM setting mergetool to kdiff3
+git config --global --add merge.tool kdiff3
+git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add mergetool.kdiff3.trustExitCode false
 
+git config --global --add diff.guitool kdiff3
+git config --global --add difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add difftool.kdiff3.trustExitCode false
 
 
 :start_parse
@@ -87,6 +96,52 @@ pause
 color f4
 git  fetch --all --v
 git  checkout upstream/%ORIGIN_BRANCH% --v
+goto noparse
+
+
+:action_git_showcommit
+git show <HASH>
+goto noparse
+
+:action_git_UnstageFile
+git rm --cached <FILENAME>
+goto noparse
+
+REM Uncommit
+git reset HEAD~1 --soft
+goto noparse
+
+:action_git_Editmessagelastcommit
+git commit --amend
+goto noparse
+
+:action_git_Restartbranchasremote
+git fetch --all
+git reset --hard origin/master
+goto noparse
+
+:action_git_Removeremotebranch
+git push origin --delete <branch_name>
+goto noparse
+
+:action_git_Stash
+git stash
+git stash pop
+git stash drop
+goto noparse
+
+
+:action_git_hardReset
+git remote add %remoteUser% git@github.com:%remoteUser%/%remoteBranch%.git
+git remote -v
+git fetch %remoteUser%/%remoteBranch%
+git checkout %remoteUser%/%remoteBranch%
+goto noparse
+
+
+:action_git_hardReset
+git clean -f -d (force including directories)
+Git reset --hard
 goto noparse
 
 :action_git_update_origin
