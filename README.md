@@ -1,9 +1,12 @@
+![](http://chart.apis.google.com/chart?cht=qr&chs=500x500&choe=UTF-8&chld=H%7C0&chl=http://bit.do/dHJER)
 
+
+---
 ![  x86  ](https://code.google.com/archive/p/corkami/wikis/x86oddities.wiki)
-   .   
+---
 ![  PDF  ](https://raw.githubusercontent.com/rodrmp/pics/1a1b81d8a204aa7dff40489b3993c2f5a3fcacb5/binary/pdf101/pdf101.pdf)
 
-
+---
 
 ![](https://raw.githubusercontent.com/corkami/pics/master/binary/PDF.png)
 ![](https://raw.githubusercontent.com/corkami/pics/master/binary/PDF.png)
