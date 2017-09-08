@@ -9,7 +9,6 @@
 ---
 
 ![](https://raw.githubusercontent.com/corkami/pics/master/binary/PDF.png)
-![](https://raw.githubusercontent.com/corkami/pics/master/binary/PDF.png)
 
 ![](https://github.com/rodrmp/pics/blob/master/binary/x86.png)
 ![](https://github.com/rodrmp/pics/blob/master/binary/x64.png)
@@ -30,6 +29,7 @@
 
 ![](https://github.com/rodrmp/pics/blob/master/binary/SWF.png)
 
+![](https://github.com/rodrmp/pics/blob/master/binary/zip101/zip101.svg)
 
 
 
